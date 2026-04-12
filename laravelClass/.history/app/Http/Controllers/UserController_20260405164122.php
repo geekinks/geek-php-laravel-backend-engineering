@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Models\Post;
+
 class UserController extends Controller
 {
     /**
@@ -80,28 +80,7 @@ class UserController extends Controller
 
     public function getPost()
     {
-        // create record
-        // Post::create([
-        //     "title" => "My Post",
-        //     "content" => "This is my post content",
-        //     "mobile_number" => 1234567890,
-        // ]);
-        // show record
-        $posts = Post::latest()->get();
-        // foreach ($posts as $post) {
-        //     echo $post->title . " - " . $post->content . " - " . $post->mobile_number . "<br>";
-        // }
-
-        // update record
-        Post::where("id", "2")->update([
-            "title" => "My Post Updated",
-            "content" => "This is my post content updated",
-        ]);
-
-        // delete record 1 
-        Post::where("id", 1)->delete();
-
-
-        return $posts;                                                                                                                                                                                                                                                                        ;
+        Post::
+        return "Yes nine post";
     }
 }

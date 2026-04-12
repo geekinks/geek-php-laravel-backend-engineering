@@ -97,9 +97,7 @@ class UserController extends Controller
             "title" => "My Post Updated",
             "content" => "This is my post content updated",
         ]);
-
-        // delete record 1 
-        Post::where("id", 1)->delete();
+        
 
 
         return $posts;                                                                                                                                                                                                                                                                        ;

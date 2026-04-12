@@ -92,14 +92,12 @@ class UserController extends Controller
         //     echo $post->title . " - " . $post->content . " - " . $post->mobile_number . "<br>";
         // }
 
-        // update record
+        
         Post::where("id", "2")->update([
             "title" => "My Post Updated",
             "content" => "This is my post content updated",
         ]);
 
-        // delete record 1 
-        Post::where("id", 1)->delete();
 
 
         return $posts;                                                                                                                                                                                                                                                                        ;

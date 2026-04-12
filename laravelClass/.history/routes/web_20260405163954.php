@@ -12,7 +12,7 @@ Route::get("register/user/{id}", function($id){
 Route::get("user/record", [UserController::class, 'index']);
 Route::post("user/record/store", [UserController::class, 'store'])->name("user.store");
 Route::get("user/create", [UserController::class, 'create'])->name("user.create");
-Route::get("posts", [UserController::class, "getPost"])->name("posts.index");
+Route::get("posts", [UserController:class, ""])
 
 Route::name("site.")->prefix("site")->group(function(){
     Route::get("/", function(){
