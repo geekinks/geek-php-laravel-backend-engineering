@@ -2,10 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Category;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models
 
 class Post extends Model
 {
@@ -22,10 +21,6 @@ class Post extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class, "category_id", "id");
-    }
-    public function user()
-    {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Category::class);
     }
 }

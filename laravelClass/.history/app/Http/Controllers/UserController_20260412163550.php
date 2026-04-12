@@ -90,9 +90,9 @@ class UserController extends Controller
         // ]);
         // show record
         $posts = Post::with(["category", "user"])->latest()->get();
-        foreach ($posts as $post) {
-            echo "Editor {$post->user->name} has post the: {$post->title}  -  {$post->content}  -  {$post->mobile_number} and category is: {$post->category->name}<br>";
-        }
+        // foreach ($posts as $post) {
+        //     echo $post->title . " - " . $post->content . " - " . $post->mobile_number . "<br>";
+        // }
 
         // update record
         Post::where("id", "2")->update([
@@ -104,6 +104,6 @@ class UserController extends Controller
         Post::where("id", 1)->delete();
 
 
-        // return $posts;                                                                                                                                                                                                                                                                        ;
+        return $posts;                                                                                                                                                                                                                                                                        ;
     }
 }

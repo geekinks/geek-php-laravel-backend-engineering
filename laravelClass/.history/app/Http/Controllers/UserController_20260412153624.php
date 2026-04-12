@@ -81,18 +81,17 @@ class UserController extends Controller
     public function getPost()
     {
         // create record
-        // Post::create([
-        //     "user_id" => 1,
-        //     "category_id" => 1,
-        //     "title" => "My Post",
-        //     "content" => "This is my post content",
-        //     "mobile_number" => 1234567890,
-        // ]);
+        Post::create([
+            ""
+            "title" => "My Post",
+            "content" => "This is my post content",
+            "mobile_number" => 1234567890,
+        ]);
         // show record
-        $posts = Post::with(["category", "user"])->latest()->get();
-        foreach ($posts as $post) {
-            echo "Editor {$post->user->name} has post the: {$post->title}  -  {$post->content}  -  {$post->mobile_number} and category is: {$post->category->name}<br>";
-        }
+        $posts = Post::latest()->get();
+        // foreach ($posts as $post) {
+        //     echo $post->title . " - " . $post->content . " - " . $post->mobile_number . "<br>";
+        // }
 
         // update record
         Post::where("id", "2")->update([
@@ -104,6 +103,6 @@ class UserController extends Controller
         Post::where("id", 1)->delete();
 
 
-        // return $posts;                                                                                                                                                                                                                                                                        ;
+        return $posts;                                                                                                                                                                                                                                                                        ;
     }
 }

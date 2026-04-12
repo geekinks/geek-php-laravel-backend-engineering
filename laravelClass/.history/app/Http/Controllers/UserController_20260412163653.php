@@ -91,7 +91,7 @@ class UserController extends Controller
         // show record
         $posts = Post::with(["category", "user"])->latest()->get();
         foreach ($posts as $post) {
-            echo "Editor {$post->user->name} has post the: {$post->title}  -  {$post->content}  -  {$post->mobile_number} and category is: {$post->category->name}<br>";
+            echo $post->title . " - " . $post->content . " - " . $post->mobile_number .<br>";
         }
 
         // update record
